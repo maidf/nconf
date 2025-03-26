@@ -21,7 +21,7 @@
       ndev = "nix develop";
       repl = "nix repl";
       ".." = "cd ..";
-      de = "devbox ";
+      de = "devenv ";
     };
     bashrcExtra = lib.mkForce ''
       # rust代理
