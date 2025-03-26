@@ -44,6 +44,7 @@
     nil
 
     alsa-utils
+    rustup
     # nautilus
     # wl-clipboard
     # xclip
