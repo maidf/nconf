@@ -48,7 +48,6 @@
                   shell = pkgs.bashInteractive;
                   extraGroups = [
                     "wheel"
-                    "video"
                   ];
                 };
                 programs = {
