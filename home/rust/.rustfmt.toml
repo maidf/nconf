@@ -1,0 +1,5 @@
+max_width = 100                # 每行最大字符数
+use_small_heuristics = "Max"   # 使用最严格的格式化规则
+tab_spaces = 4                 # 每个制表符使用 2 个空格
+reorder_imports = true         # 按字母顺序重新排序导入
+newline_style = "Unix"         # 使用 Unix 风格的新行（LF）
