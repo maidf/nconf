@@ -7,7 +7,7 @@
 
   imports = [
     ./bash/bash.nix
-    # ./java/java.nix
+    ./java/java.nix
     ./npm/npm.nix
     ./rust/rust.nix
   ];
