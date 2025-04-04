@@ -16,7 +16,7 @@
       "https://nix-community.cachix.org"
     ];
   };
-  
+
   outputs =
     {
       self,
@@ -59,8 +59,8 @@
                   ];
                 };
                 networking = {
-				  hostName = "maidnix";
-				  firewall.enable = false;
+                  hostName = "maidnix";
+                  firewall.enable = false;
                 };
                 programs = {
                   nano.enable = false;
