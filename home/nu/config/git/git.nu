@@ -13,7 +13,7 @@
 #		 basic-git-left-prompt $left
 # }
 def in_git_repo [] {
-  let res: string = do -i { git branch --show-current } | complete | get stdout
+  let res: string = do -i { git branch --show-current } | complete | get stdout | str trim
   $res
 }
 
