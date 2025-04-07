@@ -19,6 +19,7 @@ def in_git_repo [] {
 
 export def basic-git-left-prompt [in_left_prompt] {
   mut currently_in_git_repo = in_git_repo
+  echo $currently_in_git_repo
 
   if $currently_in_git_repo {
     # get the branch info first
