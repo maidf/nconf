@@ -1,0 +1,1 @@
+export use direnv.nu *
