@@ -13,21 +13,14 @@
 #		 basic-git-left-prompt $left
 # }
 def in_git_repo [] {
-  let res = do -i { git branch --show-current } | complete | select stdout
+  let res: string = do -i { git branch --show-current } | complete | select stdout
   $res
 }
 
 export def basic-git-left-prompt [in_left_prompt] {
-  mut currently_in_git_repo = in_git_repo
-  echo $currently_in_git_repo
+  let branch_info: string = in_git_repo
 
-  if $currently_in_git_repo {
-    # get the branch info first
-    let branch_info = git branch -l
-      | lines
-      | filter {|e| $e | str contains "*" }
-      | each {|e| $e | str replace "* " ""}
-      | get 0
+  if $branch_info {
     let git_status = git status -s
 
     # get the status in short
