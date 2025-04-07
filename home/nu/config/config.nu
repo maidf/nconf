@@ -13,9 +13,8 @@ alias l = la
 
 # sudo nixos-rebuild switch 不带默认git信息
 def nrs [msg: string, path_or_both: string = ., host?: string] {
-  if (git add . | lines | is-empty) == false {
-    git commit -m $msg
-  }
+  nix flake update
+  git commit -m $msg
   if $host == null {
     sudo nixos-rebuild switch --flake $"($path_or_both)"
   } else {
@@ -25,15 +24,15 @@ def nrs [msg: string, path_or_both: string = ., host?: string] {
 
 # sudo nixos-rebuild switch 带默认git信息
 def nr [msg: string = "upd", path_or_both: string = ., host?: string] {
-  if (git add . | lines | is-empty) == false {
+    nix flake update
+    git add .
     git commit -m $msg
-  }
 
-  if $host == null {
-    sudo nixos-rebuild switch --flake $"($path_or_both)"
-  } else {
-    sudo nixos-rebuild switch --flake $"($path_or_both)#($host)"
-  }
+    if $host == null {
+        sudo nixos-rebuild switch --flake $"($path_or_both)"
+    } else {
+        sudo nixos-rebuild switch --flake $"($path_or_both)#($host)"
+    }
 }
 
 

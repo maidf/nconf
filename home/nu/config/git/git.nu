@@ -13,7 +13,7 @@
 #		 basic-git-left-prompt $left
 # }
 def in_git_repo [] {
-  let res = (do { git branch --show-current o+e>| ignore } | lines) != ""
+  let res = do -i { git branch --show-current } | complete | select stdout
   $res
 }
 
@@ -26,6 +26,7 @@ export def basic-git-left-prompt [in_left_prompt] {
       | lines
       | filter {|e| $e | str contains "*" }
       | each {|e| $e | str replace "* " ""}
+      | is-not-empty
       | get 0
     let git_status = git status -s
 
