@@ -1,1 +1,1 @@
-export use direnv.nu *
+export use devenv.nu *
