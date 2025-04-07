@@ -17,4 +17,9 @@
     source = ./config/pnpm;
     recursive = true;
   };
+
+  home.file.".config/nushell/devenv" = {
+    source = ./config/devenv;
+    recursive = true;
+  };
 }

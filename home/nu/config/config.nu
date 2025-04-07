@@ -5,7 +5,7 @@ $env.config = {
 }
   
 use pnpm *
-use direnv *
+use devenv *
 
 alias ll = ls -l
 alias la = ls -a
