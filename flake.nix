@@ -52,7 +52,7 @@
                 users.users."${usr}" = {
                   isNormalUser = true;
                   description = "${usr}";
-                  shell = pkgs.fish;
+                  shell = pkgs.nushell;
                   extraGroups = [
                     "wheel"
                     # "docker"
