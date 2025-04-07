@@ -45,6 +45,8 @@
     # extraPackages = with pkgs; [ imagemagick ];
   };
 
+  programs.fish.enable = true;
+
   programs = {
     direnv = {
       enable = true;
