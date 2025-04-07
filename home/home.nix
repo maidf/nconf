@@ -6,6 +6,7 @@
   home.homeDirectory = "/home/maidf";
 
   imports = [
+    ./nu/nu.nix
     ./bash/bash.nix
     ./java/java.nix
     ./npm/npm.nix
