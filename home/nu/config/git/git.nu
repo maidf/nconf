@@ -26,7 +26,6 @@ export def basic-git-left-prompt [in_left_prompt] {
       | lines
       | filter {|e| $e | str contains "*" }
       | each {|e| $e | str replace "* " ""}
-      | is-not-empty
       | get 0
     let git_status = git status -s
 
