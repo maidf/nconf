@@ -2,7 +2,7 @@
 use git *
 
 def create_left_prompt [] {
-    let dir = $env.PWD | str replace $env.HOME '~'
+    let dir = $env.PWD | str replace $env.HOME ' ~'
 
     let user = whoami
     let host = uname | get nodename
