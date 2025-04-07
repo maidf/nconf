@@ -2,11 +2,7 @@
 use git *
 
 def create_left_prompt [] {
-    let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-path }) {
-        null => $env.PWD
-        '' => '~'
-        $relative_pwd => ([~ $relative_pwd] | path join)
-    }
+    let dir = $env.PWD | str replace $env.HOME '~'
 
     let user = whoami
     let host = uname | get nodename

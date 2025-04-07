@@ -14,6 +14,7 @@ alias l = la
 # sudo nixos-rebuild switch 不带默认git信息
 def nrs [msg: string, path_or_both: string = ., host?: string] {
   nix flake update
+  git add .
   git commit -m $msg
   if $host == null {
     sudo nixos-rebuild switch --flake $"($path_or_both)"
