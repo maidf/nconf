@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743717835,
-        "narHash": "sha256-LJm6FoIcUoBw3w25ty12/sBfut4zZuNGdN0phYj/ekU=",
+        "lastModified": 1743989761,
+        "narHash": "sha256-PF+SS1vHKXGMNelvPWVlRDk+12ZyovhVET0C3MjyAPQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "66a6ec65f84255b3defb67ff45af86c844dd451b",
+        "rev": "8c9b54504c89f3aec9c82b262c1f4304407fbad6",
         "type": "github"
       },
       "original": {
@@ -38,8 +38,8 @@
     },
     "nixos": {
       "locked": {
-        "lastModified": 1743636068,
-        "narHash": "sha256-7LpSUZS220aD05LRfHZoP0vnYVIOvWrUrb7FjmeBIlg=",
+        "lastModified": 1743941887,
+        "narHash": "sha256-wlYABIPz7s8xAsocpemOwKWSqGTaCpqA1jnDmrh6efk=",
         "type": "tarball",
         "url": "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixos-24.11/nixexprs.tar.xz"
       },
@@ -87,7 +87,7 @@
     "nixpkgs_2": {
       "locked": {
         "lastModified": 315532800,
-        "narHash": "sha256-yJ6RthtxP4KB+kjjo0IIDJrbYhftX/PHzLJKhDMDzEQ=",
+        "narHash": "sha256-yhBz/KeIhoN66IZwYIfWvjQjhEdRaD4oxYbwo97Ygy4=",
         "type": "tarball",
         "url": "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixpkgs-unstable/nixexprs.tar.xz"
       },
