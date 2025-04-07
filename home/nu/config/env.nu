@@ -25,7 +25,7 @@ def create_left_prompt [] {
     let r_user = $user_segment
     let r_host = $host_segment
 
-    $"[ ($r_path)][($r_user)@($r_host)]"
+    $"[ ($r_user)@($r_host)][ ($r_path)]"
 }
 
 def create_right_prompt [] {

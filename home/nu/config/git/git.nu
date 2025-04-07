@@ -59,7 +59,7 @@ export def basic-git-left-prompt [in_left_prompt] {
     }
 
     # construct the prompt
-    $"($in_left_prompt)(ansi reset) [($branch_info)($final_git_status)]"
+    $"($in_left_prompt)(ansi reset) [󰊤 ($branch_info)($final_git_status)]"
 
   } else {
     # otherwise just return the normal prompt
