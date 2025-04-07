@@ -20,7 +20,7 @@ def in_git_repo [] {
 export def basic-git-left-prompt [in_left_prompt] {
   let branch_info: string = in_git_repo
 
-  if $branch_info == "" {
+  if $branch_info != "" {
     let git_status = git status -s
 
     # get the status in short
@@ -53,7 +53,7 @@ export def basic-git-left-prompt [in_left_prompt] {
     }
 
     # construct the prompt
-    $"($in_left_prompt)(ansi reset) [󰊤 ($branch_info)($final_git_status)]"
+    $"($in_left_prompt)(ansi reset) [󰊤 ($branch_info)($final_git_status)](ansi reset)"
 
   } else {
     # otherwise just return the normal prompt

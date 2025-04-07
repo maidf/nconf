@@ -87,7 +87,7 @@
     "nixpkgs_2": {
       "locked": {
         "lastModified": 315532800,
-        "narHash": "sha256-yhBz/KeIhoN66IZwYIfWvjQjhEdRaD4oxYbwo97Ygy4=",
+        "narHash": "sha256-4y+3IFB3gvvQujCZwdvrpPM2gXj+8rMlzcSauGR9Otc=",
         "type": "tarball",
         "url": "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixpkgs-unstable/nixexprs.tar.xz"
       },

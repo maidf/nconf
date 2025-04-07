@@ -9,13 +9,13 @@ def create_left_prompt [] {
 
     let path_color = (if (is-admin) { ansi red_bold } else { ansi green_bold })
     let separator_color = (if (is-admin) { ansi light_red_bold } else { ansi light_green_bold })
-    let path_segment = $"($path_color)($dir)(ansi reset)"
+    let path_segment = $"(ansi reset)($path_color)($dir)(ansi reset)"
 
     let user_color = (if (is-admin) { ansi blue_bold } else { ansi blue_bold })
-    let user_segment = $"($user_color)($user)(ansi reset)"
+    let user_segment = $"(ansi reset)($user_color)($user)(ansi reset)"
 
     let host_color = (if (is-admin) { ansi red_bold } else { ansi red_bold })
-    let host_segment = $"($host_color)($host)(ansi reset)"
+    let host_segment = $"(ansi reset)($host_color)($host)(ansi reset)"
 
     let r_path = $path_segment | str replace --all (char path_sep) $"($separator_color)(char path_sep)($path_color)"
     let r_user = $user_segment
