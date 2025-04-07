@@ -63,7 +63,7 @@
                   firewall.enable = false;
                 };
                 programs = {
-                  fish.enable = true;
+                  #   fish.enable = true;
                   nano.enable = false;
                   neovim = {
                     enable = true;
