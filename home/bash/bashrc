@@ -9,7 +9,7 @@
 export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
-for dir in ~/.bash/{aliases,fns,prompt}; do
+for dir in ~/.config/bash/{aliases,fns,prompt}; do
     for file in "$dir"/*.bash; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file"
     done
