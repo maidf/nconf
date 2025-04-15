@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   # home.file.".bashrc".source = lib.mkForce ./.bashrc;
@@ -12,9 +12,9 @@
     ];
   };
 
-  home.file.".bashrc".source = ./bashrc;
-  home.file.".bash_profile".source = ./bash_profile;
-  home.file.".bash/" = {
+  home.file.".bashrc".source = lib.mkForce ./bashrc;
+  home.file.".bash_profile".source = lib.mkForce ./bash_profile;
+  home.file.".bash/" = lib.mkForce {
     source = ./config;
     recursive = true;
   };

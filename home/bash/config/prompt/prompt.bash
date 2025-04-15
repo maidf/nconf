@@ -1,3 +1,7 @@
+#
+# prompt.bash
+#
+
 clear_color="\e[0m"
 clear_color="\e[0m"
 red_color="\e[31m"

@@ -1,3 +1,7 @@
+#
+# sys.bash
+#
+
 alias sudo='sudo '
 alias ..='cd ..'
 alias ls='eza -F --icons'

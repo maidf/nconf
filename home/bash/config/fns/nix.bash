@@ -1,3 +1,8 @@
+#
+# nix.bash
+#
+
+
 upd() {
     nix flake update
 }
