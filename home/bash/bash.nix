@@ -19,12 +19,13 @@
       ndev = "nix develop";
       repl = "nix repl";
       ".." = "cd ..";
-      de = "devenv ";
+      # de = "devenv ";
       neo = "fastfetch";
       nv = "nvim";
       i = "install ";
       s = "search ";
       u = "update ";
+      box = "devbox";
     };
     bashrcExtra = lib.mkForce ''
       # rust代理
