@@ -108,17 +108,6 @@ in
 }
 ```
 
-
-<!-- ### 在Arch安装目录打开cmd 设置默认启动用户
-```
-sudo nixos-rebuild switch --flake .
-exit
-wsl -t NixOS
-wsl -d NixOS --user root exit
-wsl -t NixOS
-wsl
-``` -->
-
 ### 设置ssh
 ```
 ssh-keygen -t ed25519 -C "ml@fufu.moe"
@@ -139,7 +128,7 @@ ssh -T git@github.com
 ## 复制flake项目
 ```bash
 nix shell nixpkgs#git
-git clone git@github.com:maidf/nconf.git
+git clone https://github.com/maidf/nconf.git
 ```
 
 
