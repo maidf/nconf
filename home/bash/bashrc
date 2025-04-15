@@ -1,0 +1,15 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# rust代理
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
+
+for file in ~/.bash/{aliases,fns,prompt}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
