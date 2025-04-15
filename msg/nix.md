@@ -73,7 +73,10 @@ sudo nixos-rebuild switch --option substituters "https://mirrors.tuna.tsinghua.e
 ### configuration.nix
 ```configuration.nix
 { config, lib, pkgs, ... }:
-
+let
+    usr = "maidf";
+    syshost = "mlnix";
+in
 {
   imports = [
     # include NixOS-WSL modules
@@ -82,16 +85,19 @@ sudo nixos-rebuild switch --option substituters "https://mirrors.tuna.tsinghua.e
 
   wsl = {
     enable = true;
-    defaultUser = "maidf";
+    defaultUser = "${usr}";
     wslConf = {
-      user.default = "maidf";
-      network.hostname = "maidnix";
+      user.default = "${usr}";
+      network = {
+        hostname = "${syshost}";
+        generateHosts = false;
+      };
     };
     useWindowsDriver = true;
   };
 
   nix.settings = {
-    trusted-users = [ "maidf" ];
+    trusted-users = [ ${usr} ];
     substituters = [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
     ];
