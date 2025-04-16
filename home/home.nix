@@ -25,6 +25,7 @@
     # 给每个项目创建虚拟专属环境用的，类似devcontainer，配合direnv使用
     # devenv
     devbox
+    process-compose
     # direnv
     eza
     tree
